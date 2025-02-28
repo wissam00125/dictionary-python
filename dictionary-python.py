@@ -36,6 +36,32 @@ def count_word_frequency(sentence):
 sentence1 = "apple orange banana apple orange apple banana"
 sentence2 = "Ahmad Samer Wissam Khalid AHMAD Fadi wissam Samer"
 
-print(count_word_frequency(sentence1))
-print(count_word_frequency(sentence2))
+# print(count_word_frequency(sentence1))
+# print(count_word_frequency(sentence2))
+
+company_employees = {
+    "Engineering": {
+        "Alice": {"age": 30, "role": "Software Engineer"},
+        "Bob": {"age": 28, "role": "DevOps Engineer"}
+    },
+    "HR": {
+        "Charlie": {"age": 35, "role": "HR Manager"}
+    },
+    "IT": { 
+       "Ahmad": {"age": 25, "role": "Software Engineer"},
+       "Ali": {"age": 32, "role": "System Administrator"},
+    },
+    
+}
+
+# print the company employees
+for department, employees in company_employees.items():
+    print(f"\nDepartment: {department}")
+    for name, details in employees.items():
+        print(f"   Name: {name}, Age: {details['age']}, Role: {details['role']}")
+
+
+        
+    
+
 
