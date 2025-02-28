@@ -62,6 +62,14 @@ for department, employees in company_employees.items():
 
 
         
-    
+# Add new employee
+def add_employee(department, name, age, role):
+    if department in company_employees:
+        company_employees[department][name] = {"age": age, "role": role}
+    else:
+        print(f"Department '{department}' does not exist.")
+
+
+add_employee("Engineering", "David", 27, "Data Scientist")
 
 
