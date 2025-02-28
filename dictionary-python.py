@@ -72,4 +72,16 @@ def add_employee(department, name, age, role):
 
 add_employee("Engineering", "David", 27, "Data Scientist")
 
+# Count the total number of employees in the company
+def count_total_employee(dictionary):
+    total_number_employee = 0
+    if not dictionary:
+        return 0
+    for department in dictionary:
+        total_number_employee += len(dictionary[department])
+        
+    return total_number_employee
+
+print(f"The total number of employees in the company: {count_total_employee(company_employees)}")
+
 
