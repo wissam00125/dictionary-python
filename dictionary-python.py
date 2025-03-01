@@ -13,10 +13,10 @@ def merge_dictionaries(dictionary1, dictionary2):
     return dictionary1
     
     
-# print(merge_dictionaries({"a": 1, "b": 2, "c": 3, "k": 5},  {"k": 80, "b": 10, "d": 4}))  # if two dict are not empty
-# print(merge_dictionaries({"x": 400, "y": 300}, {})) # if dict2  is empty
-# print(merge_dictionaries({}, {"x": 15, "y": 25, "z": 12})) # if dict1 is empty
-# print(merge_dictionaries({},  {})) # if both dict are empty
+print(merge_dictionaries({"a": 1, "b": 2, "c": 3, "k": 5},  {"k": 80, "b": 10, "d": 4}))  # if two dict are not empty
+print(merge_dictionaries({"x": 400, "y": 300}, {})) # if dict2  is empty
+print(merge_dictionaries({}, {"x": 15, "y": 25, "z": 12})) # if dict1 is empty
+print(merge_dictionaries({},  {})) # if both dict are empty
 
 
 # count word frequency in a sentence
@@ -36,8 +36,8 @@ def count_word_frequency(sentence):
 sentence1 = "apple orange banana apple orange apple banana"
 sentence2 = "Ahmad Samer Wissam Khalid AHMAD Fadi wissam Samer"
 
-# print(count_word_frequency(sentence1))
-# print(count_word_frequency(sentence2))
+print(count_word_frequency(sentence1))
+print(count_word_frequency(sentence2))
 
 company_employees = {
     "Engineering": {
@@ -83,5 +83,27 @@ def count_total_employee(dictionary):
     return total_number_employee
 
 print(f"The total number of employees in the company: {count_total_employee(company_employees)}")
+
+
+dictionary1 = {"Alice": 10, "Bob": 20, "Charlie": 10, "David": 30}
+# {10: ["Alice", "Charlie"], 20: ["Bob"], 30: ["David"]}
+dictionary2 = {}
+
+def group_by_value(dictionary):
+    if not dictionary:
+        print('The dictionary is empty!')
+        exit()
+        
+    new_dictionary = dict()
+    for key, value in dictionary.items():
+        if value in new_dictionary:
+            new_dictionary[value].append(key)
+        else:
+            new_dictionary[value] = [key]
+    return new_dictionary
+
+print(group_by_value(dictionary1))
+print(group_by_value(dictionary2))
+
 
 
